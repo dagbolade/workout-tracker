@@ -51,9 +51,9 @@ let workoutSeed = [
     exercises: [
       {
         type: "cardio",
-        name: "Running",
-        duration: 25,
-        distance: 4
+        name: "Biking",
+        duration: 20,
+        distance: 5
       }
     ]
   },
@@ -88,7 +88,7 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "sChest dips",
+        name: "Chest dips",
         duration: 30,
         weight: 20,
         reps: 10,
