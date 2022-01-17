@@ -1,11 +1,13 @@
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
+let mongoose = require("mongoose");
 let db = require("../models");
-
 const { MONGODB_URI, MONGODB__PRODUCTION_URI } = process.env;
 
-
-const client = new MongoClient(process.env.NODE_ENV === "production" ? MONGODB__PRODUCTION_URI : MONGODB_URI);
+mongoose.connect(process.env.NODE_ENV === "production" ? MONGODB__PRODUCTION_URI : MONGODB_URI, {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 let workoutSeed = [
   {
@@ -89,7 +91,7 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Chest dips",
+        name: "sChest dips",
         duration: 30,
         weight: 20,
         reps: 10,
